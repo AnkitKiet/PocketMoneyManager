@@ -5,6 +5,7 @@ import android.databinding.Bindable;
 
 import edu.pocketmoneymanager.BR;
 
+
 /**
  * Created by Ankit on 01/12/17.
  */
