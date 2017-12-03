@@ -34,6 +34,15 @@
             android:hint="Enter Any Details"
             android:padding="12dp" />
 
+        <CheckBox
+            android:id="@+id/chkAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:buttonTint="@color/colorAccent"
+            android:padding="12dp"
+            android:text="Check If You Have To Add This Money"
+            android:textColor="@color/colorAccent" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabAdd"
@@ -42,5 +51,33 @@
             android:layout_gravity="end"
             android:layout_margin="25dp"
             android:src="@drawable/ic_add_black_24dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="25dp"
+                android:text="Wallet Balance:-"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btnSync"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignEnd="@id/txtBalance"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="18dp"
+                android:background="@drawable/ic_sync_black_24dp"
+                android:backgroundTint="@color/colorPrimaryDark" />
+
+
+        </RelativeLayout>
+
     </LinearLayout>
 </layout>

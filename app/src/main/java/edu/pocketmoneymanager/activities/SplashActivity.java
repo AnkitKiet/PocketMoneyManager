@@ -2,8 +2,6 @@ package edu.pocketmoneymanager.activities;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
 
 import edu.pocketmoneymanager.R;
 import edu.pocketmoneymanager.databinding.ActivitySplashBinding;
@@ -21,7 +19,13 @@ public class SplashActivity extends BaseActivity {
         final Splash user = new Splash("Pocket Money\n Manager", "Your Personal Wallet Manager");
         binding.setSplash(user);
         binding.executePendingBindings();
-        saveTotalMoney(this,200);
+        if (sharedPreferences.getString("first", "").equals("true")) {
+            saveTotalMoney(this, 200);
+        } else {
+            editor = sharedPreferences.edit();
+            editor.putString("first", "true");
+            editor.apply();
+        }
         /*binding.getRoot().findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
