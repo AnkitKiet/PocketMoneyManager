@@ -21,6 +21,7 @@ public class SplashActivity extends BaseActivity {
         final Splash user = new Splash("Pocket Money\n Manager", "Your Personal Wallet Manager");
         binding.setSplash(user);
         binding.executePendingBindings();
+        saveTotalMoney(this,200);
         /*binding.getRoot().findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,9 +34,9 @@ public class SplashActivity extends BaseActivity {
             @Override
             public void run() {
                 try {
-                    sleep(3000);
+                    sleep(1000);
                     user.setTitle("Loading...");
-                    sleep(2000);
+                    sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {

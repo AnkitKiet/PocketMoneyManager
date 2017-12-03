@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import edu.pocketmoneymanager.fragment.AddDataFragment;
 import edu.pocketmoneymanager.fragment.DashboardViewFragment;
 
 /**
@@ -24,7 +25,7 @@ public class DashboardAdapter extends FragmentStatePagerAdapter {
                 fragment = new DashboardViewFragment();
                 break;
             case 1:
-                fragment = new DashboardViewFragment();
+                fragment = new AddDataFragment();
                 break;
 
         }
@@ -42,7 +43,7 @@ public class DashboardAdapter extends FragmentStatePagerAdapter {
             case 0:
                 return "Expenses";
             case 1:
-                return "Add New";
+                return "Add Data";
             default:
                 return null;
         }

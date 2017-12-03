@@ -19,7 +19,7 @@ import edu.pocketmoneymanager.databinding.Dashboard;
  * Created by Ankit on 01/12/17.
  */
 
-public class DashboardActivity extends AppCompatActivity {
+public class DashboardActivity extends BaseActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager;
