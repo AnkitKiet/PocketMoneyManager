@@ -1,11 +1,11 @@
 package edu.pocketmoneymanager.activities;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,13 +43,19 @@ public class DashboardActivity extends BaseActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
+        if (item.getItemId() == R.id.pay) {
 
+            Intent intent=new Intent(DashboardActivity.this,PayToFriendActivity.class);
+            startActivity(intent);
+
+        }
         return super.onOptionsItemSelected(item);
     }
 

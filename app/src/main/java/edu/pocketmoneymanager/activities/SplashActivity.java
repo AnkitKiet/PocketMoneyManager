@@ -23,7 +23,7 @@ public class SplashActivity extends BaseActivity {
             saveTotalMoney(this, 200);
         } else {
             editor = sharedPreferences.edit();
-            editor.putString("first", "true");
+            editor.putString("first", "false");
             editor.apply();
         }
         /*binding.getRoot().findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
